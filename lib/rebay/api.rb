@@ -7,7 +7,7 @@ module Rebay
     # default site is EBAY_US, for other available sites see eBay documentation:
     # http://developer.ebay.com/DevZone/merchandising/docs/Concepts/SiteIDToGlobalID.html
     COUNTRY_MAPPINGS = { 'United States' => { :global_id => "EBAY-US", :site_id => 0 },
-                         'United Kingdom' => { :global_id => "EBAY-UK", :site_id => 3 },
+                         'United Kingdom' => { :global_id => "EBAY-GB", :site_id => 3 },
                          'Australia' => { :global_id =>"EBAY-AU", :site_id => 15 },
                          'Austria' => { :global_id => "EBAY-AT", :site_id => 16 },
                          'Canada' => { :global_id =>"EBAY-ENCA", :site_id => 2 },
