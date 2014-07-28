@@ -94,8 +94,9 @@ module Rebay
     
     private    
     def build_request_url(service, params=nil)
-      url = "#{self.class.base_url}?callname=#{service}&appid=#{Rebay::Api.app_id}&version=#{VERSION}&responseencoding=JSON"
-      url += build_rest_payload({siteid: Rebay::Api.default_site_id}.merge(params))
+      global_id = params && params.delete(:global_id) || Rebay::Api.default_global_id
+      url = "#{self.class.base_url}?OPERATION-NAME=#{service}&SERVICE-VERSION=#{VERSION}&SECURITY-APPNAME=#{Rebay::Api.app_id}&GLOBAL-ID=#{global_id}&RESPONSE-DATA-FORMAT=JSON&REST-PAYLOAD"
+      url += build_rest_payload(params)
       return url
     end
   end
